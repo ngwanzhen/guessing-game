@@ -1,0 +1,15 @@
+body{
+  background-color: rgb(150, 75, 27);
+  color: white;
+}
+
+.container{
+  width: 600px;
+  margin: 0 auto;
+  padding: 10px 10px;
+}
+
+/*cmd-shift-c for entire palette to appear*/
+/*if you start server, upon saving, the website gets updated auto*/
+/*cmd-ctrl to section up and down*/
+/*margin 0 auto (0 is top, bottom, auto is left right)*/
