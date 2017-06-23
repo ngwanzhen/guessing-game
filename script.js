@@ -12,10 +12,6 @@ function getRandomIntInclusive(min, max) {
 var ans = getRandomIntInclusive(1, 5)
 console.log(ans)
 
-// var state = false
-// to get start game button, end game button, restart
-
-
 function higherOrLower (userIn, ans) {
   if (userIn !== ans) {
     if (userIn > ans) {h1.innerText = 'lower pls'
@@ -33,7 +29,6 @@ function getUser () {
   // return higherOrLower(userIn, ans)
 }
 
-//function should get input,
-//check and change css
-//decide if should loop back to get input
 setTimeout(getUser, 1000)
+
+// to get start game button, end game button, restart
