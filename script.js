@@ -5,7 +5,18 @@ var body = document.querySelector('body')
 
 // **Update: Button added to start game;
 // issues: 1) re-starting game does not generate new random number only page re-load does
-document.getElementById('startBtn').addEventListener('click', getUser)
+// document.getElementById('startBtn').addEventListener('click', getUser)
+document.getElementById('startBtn').addEventListener('click', randomCol)
+document.getElementById('startBtn').addEventListener('click', setTimeout(getUser, 1000))
+document.querySelector('h1').addEventListener('click', restart)
+
+function randomCol () {
+  var x = getRandomIntInclusive(0, 255)
+  var y = getRandomIntInclusive(0, 255)
+  var z = getRandomIntInclusive(0, 255)
+  var color = 'rgba(' + x + ',' + y + ',' + z + ',' + '1' + ')'
+  body.style.backgroundColor = color
+}
 
 function getRandomIntInclusive (min, max) {
   min = Math.ceil(min)
