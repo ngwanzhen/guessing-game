@@ -49,11 +49,8 @@ function changeName () {
 
 function addScore () {
   if (colorText == displayedColor) {
-    score = 0
     score += 1
     h1.innerText = 'score is ' + score
-    score = 0
-
   }
 }
 
