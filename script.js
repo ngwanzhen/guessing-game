@@ -37,7 +37,7 @@ function changeColor () {
 function changeName () {
   var randomIndexColorText = getRandomIntInclusive(0, colors.length - 1)
   colorText = colors[randomIndexColorText]
-  
+
   // console.log(colorText)
   colorBtn.innerText = colorText
 }
@@ -49,11 +49,8 @@ function changeName () {
 
 function addScore () {
   if (colorText == displayedColor) {
-    score = 0
     score += 1
     h1.innerText = 'score is ' + score
-    score = 0
-
   }
 }
 
