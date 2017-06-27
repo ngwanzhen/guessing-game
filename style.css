@@ -9,6 +9,12 @@ body{
   padding: 10px 10px;
 }
 
+#colorBtn{
+  height: 100px;
+  width: 200px;
+  font-size: 40px;
+}
+
 /*cmd-shift-c for entire palette to appear*/
 /*if you start server, upon saving, the website gets updated auto*/
 /*cmd-ctrl to section up and down*/

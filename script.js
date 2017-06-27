@@ -5,19 +5,67 @@ var body = document.querySelector('body')
 
 // **Update: Button added to start game;
 // issues: 1) re-starting game does not generate new random number only page re-load does
+var colorBtn = document.getElementById('colorBtn')
+colorBtn.addEventListener('click', setTimeout(startGame, 1000))
+colorBtn.addEventListener('click', addScore)
 
-document.getElementById('startBtn').addEventListener('click', randomCol)
+// document.getElementById('scoreBtn').addEventListener('click', addScore)
+
+// colorBtn.addEventListener('click', addScore)
+
 
 // document.getElementById('startBtn').addEventListener('click', setTimeout(getUser, 1000))
 // document.getElementById('startBtn').addEventListener('click', restart)
-function randomCol(){
-  var x = getRandomIntInclusive(0,255)
-  var y = getRandomIntInclusive(0,255)
-  var z = getRandomIntInclusive(0,255)
-  var color = 'rgba(' + x + ',' + y + ',' + z + ','+ '1' + ')'
-  body.style.backgroundColor = color
+var colors = ['blue', 'green', 'pink', 'red', 'brown', 'purple']
+var colorText = ''
+var displayedColor = 'blue'
+var score = 0
+
+function startGame () {
+  setInterval(changeColor, 3000)
+  setInterval(changeName, 3000)
+  // setInterval(trackScores, 3000)
 }
 
+
+function changeColor () {
+  var randomIndex = getRandomIntInclusive(0, colors.length - 1)
+  displayedColor = colors[randomIndex]
+  body.style.backgroundColor = displayedColor
+}
+
+function changeName () {
+  var randomIndexColorText = getRandomIntInclusive(0, colors.length - 1)
+  colorText = colors[randomIndexColorText]
+  
+  // console.log(colorText)
+  colorBtn.innerText = colorText
+}
+
+// function trackScores () {
+//   if (colorText == displayedColor) { console.log('hit')
+//   }
+// }
+
+function addScore () {
+  if (colorText == displayedColor) {
+    score = 0
+    score += 1
+    h1.innerText = 'score is ' + score
+    score = 0
+
+  }
+}
+
+
+
+// function randomCol () {
+//   var x = getRandomIntInclusive(0, 255)
+//   var y = getRandomIntInclusive(0, 255)
+//   var z = getRandomIntInclusive(0, 255)
+//   var color = 'rgba(' + x + ',' + y + ',' + z + ',' + '1' + ')'
+//   body.style.backgroundColor = color
+// }
 
 function getRandomIntInclusive (min, max) {
   min = Math.ceil(min)
